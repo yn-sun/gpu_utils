@@ -28,7 +28,7 @@ class GPUTools(object):
 
    
     @classmethod
-    def detect_availabel_gpu_id(cls):
+    def get_available_gpu_ids(cls):
         equipped_gpu_ids, gpu_info_list = cls._get_equipped_gpu_ids_and_used_gpu_info()
         
         used_gpu_ids = []
@@ -42,7 +42,7 @@ class GPUTools(object):
             if id_ not in used_gpu_ids:
                 unused_gpu_ids.append(id_)
                 
-        return unused_gpu_ids      
+        return unused_gpu_ids       
     
     
     
